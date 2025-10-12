@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block page_title %}
+        This is Default Title
+        {% endblock %}
+    </title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+    <!-- ✅ Your Custom CSS (second) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom_style.css') }}">
+
+</head>
+
+<body>
+    <h3 class="custom-heading">This is Default From Layout.html Using the Custom CSS </h3>
+    <h3 class="text-danger fw-bold">This is Default From Layout.html Using the Bootstrap </h3>
+    <hr>
+    <hr>
+    <hr>
+    <h1>Welcome To {{BUSINESS_NAME}} </h1>
+
+
+    <div class="d-flex justify-content-center m-3">
+        <button class="btn btn-primary w-50 text-warning">
+            {{BUSINESS_NAME}} 💻
+        </button>
+    </div>
+
+
+    {% block content %}
+    {# Here i will write main content of any other html file. #}
+    {% endblock content %}
+
+
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+
+</body>
+
+</html>
