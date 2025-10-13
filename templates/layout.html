@@ -42,8 +42,11 @@
     {% endblock content %}
 
 
+    {% include 'partials/footer.html' %}
+
+
     <!-- Bootstrap JS Bundle (includes Popper) -->
-    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
 
 </body>
 
