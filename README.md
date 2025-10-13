@@ -6,3 +6,10 @@ Some Variable Globally:
 
 * BUSINESS_NAME
 
+
+
+## How i can run the application:
+
+```
+uv run main.py
+```
