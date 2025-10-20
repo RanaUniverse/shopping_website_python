@@ -11,10 +11,12 @@
     </title>
 
 
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
 
-    <!-- ✅ Your Custom CSS (second) -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='bs_icons/bootstrap-icons.min.css') }}">
+
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/custom_style.css') }}">
 
 </head>
@@ -28,14 +30,18 @@
     <h3 class="text-danger fw-bold">This is Default From Layout.html Using the Bootstrap </h3>
     #}
 
-    <hr>
-    <hr>
-    <hr>
+    <hr class="border border-danger border-5">
 
 
 
 
-    <h1>Welcome To {{BUSINESS_NAME}} </h1>
+    <h1>
+        <i class="bi bi-arrow-bar-right"></i>
+        Welcome To {{BUSINESS_NAME}}
+    </h1>
+
+
+
 
 
     <div class="d-flex justify-content-center m-3">
@@ -55,14 +61,12 @@
 
 
 
-    <hr>
-    <hr>
-    <hr>
+    <hr class="border border-danger border-5">
+
 
     {% include 'partials/footer.html' %}
 
 
-    <!-- Bootstrap JS Bundle (includes Popper) -->
     <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
 
 </body>
