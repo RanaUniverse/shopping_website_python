@@ -1,4 +1,4 @@
-{% macro social_links_in_footer(socials) %}
+{% macro footer_social_media_nav(socials) %}
 <div class="col">
     <h5 class="fw-bold">Connect With Us</h5>
     <ul class="nav flex-column">
@@ -12,6 +12,39 @@
         </li>
         {% endfor %}
 
+    </ul>
+</div>
+{% endmacro %}
+
+
+
+{% macro footer_know_about_us(pages) %}
+<div class="col">
+    <h5 class="fw-bold">Know About Us</h5>
+    <ul class="nav flex-column">
+        {% for page in pages %}
+        <li class="nav-item mb-1">
+            <a href="{{ page.url }}" class="nav-link p-0 text-body-secondary">
+                {{ page.name }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endmacro %}
+
+
+{% macro footer_help_section(links) %}
+<div class="col">
+    <h5 class="fw-bold">Let Us Help You</h5>
+    <ul class="nav flex-column">
+        {% for link in links %}
+        <li class="nav-item mb-1">
+            <a href="{{ link.url }}" class="nav-link p-0 text-body-secondary">
+                {{ link.name }}
+            </a>
+        </li>
+        {% endfor %}
     </ul>
 </div>
 {% endmacro %}

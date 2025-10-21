@@ -30,19 +30,17 @@
     <h3 class="text-danger fw-bold">This is Default From Layout.html Using the Bootstrap </h3>
     #}
 
+
+    {% block content %}
+
+    {# Here i will write main content of any other html file. #}
+
     <hr class="border border-danger border-5">
-
-
-
 
     <h1>
         <i class="bi bi-arrow-bar-right"></i>
         Welcome To {{BUSINESS_NAME}}
     </h1>
-
-
-
-
 
     <div class="d-flex justify-content-center m-3">
         <button class="btn btn-primary w-50 text-warning">
@@ -50,17 +48,9 @@
         </button>
     </div>
 
-
-    {% block content %}
-    {# Here i will write main content of any other html file. #}
     {% endblock content %}
 
-
-
-
-
-
-
+    
     <hr class="border border-danger border-5">
 
 

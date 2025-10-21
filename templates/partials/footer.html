@@ -1,4 +1,4 @@
-{% from 'macros.html' import social_links_in_footer %}
+{% from 'macros.html' import footer_social_media_nav, footer_know_about_us, footer_help_section %}
 
 
 <footer class="bg-info-subtle py-1">
@@ -6,93 +6,15 @@
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 py-1 my-5">
 
 
-            <div class="col">
-                <h5 class="fw-bold">Know About Us</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-1">
-                        <a href="#" class="nav-link p-0 text-body-secondary">Our Address</a>
-                    </li>
-                    <li class="nav-item mb-1">
-                        <a href="#" class="nav-link p-0 text-body-secondary">Our Certificate</a>
-                    </li>
-                    <li class="nav-item mb-1">
-                        <a href="#" class="nav-link p-0 text-body-secondary">Our Achievements</a>
-                    </li>
-                    <li class="nav-item mb-1">
-                        <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
-                    </li>
-                </ul>
-            </div>
 
 
-
-            {{ social_links_in_footer(social_media_infos) }}
-
-            {#
-            <!-- <div class="col">
-                <h5 class="fw-bold">Connect with Us</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-1">
-                        <a href="/about/telegram" class="nav-link p-0 text-body-secondary">
-                            <i class="bi bi-telegram"></i>
-                            Telegram
-                        </a>
-                    </li>
-                    <li class="nav-item mb-1">
-                        <a href="/about/facebook" class="nav-link p-0 text-body-secondary">
-                            <i class="bi bi-facebook"></i>
-                            Facebook
-                        </a>
-                    </li>
-                    <li class="nav-item mb-1">
-                        <a href="/about/twitter" class="nav-link p-0 text-body-secondary">
-                            <i class="bi bi-twitter-x"></i>
-                            X (Twitter)
-                        </a>
-                    </li>
-                    <li class="nav-item mb-1">
-                        <a href="/about/instagram" class="nav-link p-0 text-body-secondary">
-                            <i class="bi bi-instagram"></i>
-                            Instagram
-                        </a>
-                    </li>
-                    <li class="nav-item mb-1">
-                        <a href="/about/youtube" class="nav-link p-0 text-body-secondary">
-                            <i class="bi bi-youtube"></i>
-                            YouTube
-                        </a>
-                    </li>
-                </ul>
-            </div> -->
-            #}
+            {{ footer_know_about_us(know_about_us_links) }}
 
 
-
-            <div class="col">
-                <h5 class="fw-bold">Let Us Help You</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-1">
-                        <a href="#" class="nav-link p-0 text-body-secondary">Your Account</a>
-                    </li>
-                    <li class="nav-item mb-1">
-                        <a href="#" class="nav-link p-0 text-body-secondary">Returns Centre</a>
-                    </li>
-                    <li class="nav-item mb-1">
-                        <a href="#" class="nav-link p-0 text-body-secondary">Recalls and Product Safety Alerts</a>
-                    </li>
-                    <li class="nav-item mb-1">
-                        <a href="#" class="nav-link p-0 text-body-secondary">100% Purchase Protection</a>
-                    </li>
-                    <li class="nav-item mb-1">
-                        <a href="#" class="nav-link p-0 text-body-secondary">Download Our App</a>
-                    </li>
-                    <li class="nav-item mb-1">
-                        <a href="#" class="nav-link p-0 text-body-secondary">Help Section</a>
-                    </li>
-                </ul>
-            </div>
+            {{ footer_social_media_nav(social_media_infos) }}
 
 
+            {{ footer_help_section(help_section_links) }}
 
         </div>
 

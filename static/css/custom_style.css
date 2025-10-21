@@ -14,11 +14,11 @@
 
 /* Change both the icon and the text color when hovering over the link */
 
-.nav-link:hover i {
+footer .nav-link:hover i {
     color: aqua;
 }
 
-.nav-link:hover {
+footer .nav-link:hover {
     color: #fd2003;
     /* Hover color for the text */
     text-decoration: underline;
