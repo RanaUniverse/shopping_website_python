@@ -1,0 +1,17 @@
+{% macro social_links_in_footer(socials) %}
+<div class="col">
+    <h5 class="fw-bold">Connect With Us</h5>
+    <ul class="nav flex-column">
+
+        {% for platform in socials %}
+        <li class="nav-item mb-1">
+            <a href="{{ platform.url }}" class="nav-link p-0 text-body-secondary">
+                <i class="bi bi-{{ platform.icon }}"></i>
+                {{ platform.name }}
+            </a>
+        </li>
+        {% endfor %}
+
+    </ul>
+</div>
+{% endmacro %}

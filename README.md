@@ -13,6 +13,12 @@ from this link i will download the zip.
 i need to keep the icons css and the fonts in same dir.
 
 
+webapp
+in this upper folder i will keep many blueprint things i though to make.
+
+
+
+
 Some Variable Globally:
 
 * BUSINESS_NAME

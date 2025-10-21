@@ -5,3 +5,26 @@
     padding: 10px;
     border-radius: 5px;
 }
+
+
+/* This will be added to the footer section of the page. */
+
+
+
+
+/* Change both the icon and the text color when hovering over the link */
+
+.nav-link:hover i {
+    color: aqua;
+}
+
+.nav-link:hover {
+    color: #fd2003;
+    /* Hover color for the text */
+    text-decoration: underline;
+    /* Add underline */
+    border: 2px solid #fd2003;
+    /* Add border on hover */
+    border-radius: 5px;
+    /* Optional: rounded corners for the border */
+}
