@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+
+{% block page_title %}
+{{ item.name }}
+{% endblock page_title %}
+
+
+
+{% block content %}
+<div class="container text-center">
+
+    <h1>{{ item.name }}</h1>
+    <img src="{{ item.image_url }}" alt="{{ item.name }}" width="300">
+    <p>{{ item.description }}</p>
+    <p>
+        <strong>
+            Price:
+        </strong>
+        ₹ {{ item.price }}
+    </p>
+
+</div>
+{% endblock content %}

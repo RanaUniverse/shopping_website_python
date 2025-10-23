@@ -8,10 +8,12 @@ from flask import Flask, render_template
 
 
 from webapp.footer_sections.routes import footers_bp
+from webapp.items_informations.routes import items_bp
 
 app = Flask(__name__)
 
 app.register_blueprint(footers_bp)
+app.register_blueprint(items_bp)
 
 
 load_dotenv()
