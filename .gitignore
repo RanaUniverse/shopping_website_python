@@ -12,3 +12,7 @@ wheels/
 
 # This below is the private values
 .env
+
+
+# The below is the sqlite database file
+ZZZ_DATABASE.db
