@@ -9,3 +9,8 @@ dependencies = [
     "python-dotenv>=1.1.1",
     "sqlmodel>=0.0.27",
 ]
+
+[dependency-groups]
+dev = [
+    "faker>=37.12.0",
+]
