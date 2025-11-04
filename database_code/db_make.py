@@ -11,7 +11,7 @@ from sqlmodel import SQLModel, create_engine
 
 from config_settings import DATABASE_FILE_NAME
 
-from database_code.models_table import CategoryPart, ProductPart  # type: ignore
+from database_code.models_table import CategoryModel, ProductModel  # type: ignore
 
 # I need to import this so that i am calling the models before calling the making of the database
 

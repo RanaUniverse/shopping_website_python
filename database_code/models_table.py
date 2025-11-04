@@ -7,7 +7,7 @@ from sqlmodel import (
 )
 
 
-class CategoryPart(SQLModel, table=True):
+class CategoryModel(SQLModel, table=True):
     __tablename__: str = "category_data"  # type: ignore
 
     id_: int | None = Field(default=None, primary_key=True)
@@ -16,14 +16,13 @@ class CategoryPart(SQLModel, table=True):
     # 🌐 Optional slug for URLs (e.g., "toy" for "Toy")
     slug: str | None = Field(default=None, index=True, unique=True)
 
-    # ⏰ Auto timestamps (optional, very useful)
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
-    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime | None = Field(default=None)
 
-    products: list["ProductPart"] = Relationship(back_populates="category")
+    products: list["ProductModel"] = Relationship(back_populates="category")
 
 
-class ProductPart(SQLModel, table=True):
+class ProductModel(SQLModel, table=True):
     __tablename__: str = "product_data"  # type: ignore
 
     id_: int | None = Field(default=None, primary_key=True)
@@ -34,7 +33,6 @@ class ProductPart(SQLModel, table=True):
 
     category_id: int | None = Field(default=None, foreign_key="category_data.id_")
 
-    # ⏰ Auto timestamps (optional, very useful)
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
     updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
@@ -42,4 +40,4 @@ class ProductPart(SQLModel, table=True):
     stock_qty: int | None = Field(default=None, ge=0)
     is_available: bool | None = Field(default=None)
 
-    category: CategoryPart = Relationship(back_populates="products")
+    category: CategoryModel = Relationship(back_populates="products")

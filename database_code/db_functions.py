@@ -3,7 +3,7 @@ from sqlalchemy import Engine
 from sqlmodel import Session, select
 
 
-from database_code.models_table import CategoryPart, ProductPart
+from database_code.models_table import CategoryModel, ProductModel
 
 
 def create_one_new_category(
@@ -18,8 +18,8 @@ def create_one_new_category(
         if not cat_slug:
             cat_slug = cat_name.strip().lower().replace("-", "_").replace(" ", "_")
 
-        statement = select(CategoryPart).where(
-            (CategoryPart.name == cat_name) | (CategoryPart.slug == cat_slug)
+        statement = select(CategoryModel).where(
+            (CategoryModel.name == cat_name) | (CategoryModel.slug == cat_slug)
         )
         existing_cat = session.exec(statement=statement).first()
 
@@ -35,7 +35,7 @@ def create_one_new_category(
             elif existing_cat.slug == cat_slug:
                 print(f"⚠️ Category's Slug '{cat_slug}' already exists.")
         else:
-            category = CategoryPart(
+            category = CategoryModel(
                 name=cat_name,
                 description=cat_description,
                 slug=cat_slug,
@@ -55,7 +55,7 @@ def create_one_new_product(
     is_available: bool | None = None,
 ):
     with Session(db_engine) as session:
-        product_obj = ProductPart(
+        product_obj = ProductModel(
             name=product_name,
             description=product_description,
             slug=product_slug,
